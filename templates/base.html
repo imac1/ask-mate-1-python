@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css')}}" />
+</head>
+
+<body>
+    <div class="topnav">
+        <a class="active" href="{{ url_for('list') }}">List</a>
+        <a href="{{ url_for('question') }}">Question</a>
+        <a href="{{ url_for('question_form') }}">Question Form</a>
+    </div>
+
+    <div class="body-content">
+        {% block content %}
+        {% endblock %}
+        <hr />
+        <footer>
+            {% block footer %}
+            &copy; Copyright 2022 by <a href="https://github.com/imac1">my github profile</a>.
+            {% endblock %}
+
+        </footer>
+    </div>
+</body>
+
+</html>
