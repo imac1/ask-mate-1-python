@@ -1,11 +1,17 @@
 from flask import Flask, render_template, request, redirect, url_for
+import data_manager
 
 app = Flask(__name__)
 
 
 @app.route("/")
 def list():
-    return render_template("list.html")
+    questions_header = data_manager.get_questions_header()
+    questions_list = data_manager.get_questions()
+    print(questions_list)
+    return render_template(
+        "list.html", questions_header=questions_header, questions_list=questions_list
+    )
 
 
 @app.route("/question")
