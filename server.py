@@ -7,8 +7,7 @@ app = Flask(__name__)
 @app.route("/")
 def list():
     questions_header = data_manager.get_questions_header()
-    questions_list = data_manager.get_questions()
-    print(questions_list)
+    questions_list = data_manager.update_timestamp()
     return render_template(
         "list.html", questions_header=questions_header, questions_list=questions_list
     )
