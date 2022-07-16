@@ -1,20 +1,25 @@
 .table {
-    border-spacing: 0;
-    margin: 1rem;
+    border: 1px, solid, black;
+    border-collapse: collapse;
 }
 
 .table__row :nth-child(even) {
     background-color: bisque;
+
 }
 
 .table__header {
     background-color: azure;
     text-align: left;
+    border: 1px solid;
+    border-collapse: collapse;
 }
 
 .table__cell {
     padding: auto;
     text-align: center;
+    border: 1px solid;
+    border-collapse: collapse;
 }
 
 .topnav {

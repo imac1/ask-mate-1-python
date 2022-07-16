@@ -21,3 +21,4 @@ def get_raw_questions():
         for row in csv_reader:
             questions.append(row)
     return questions
+
