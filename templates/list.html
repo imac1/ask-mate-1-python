@@ -2,22 +2,22 @@
 {% block title %} List {% endblock %}
 {% block content %}
 <h2>List Content </h2>
-<table border="1">
+<table>
     <thead>
-        <tr>
+        <tr >
             {% for item in questions_header %}
-            <td>
+            <td >
                 {{ item }}
             </td>
             {% endfor %}
         </tr>
     </thead>
-    <tbody>
+    <tbody >
         {% for question in questions_list %}
-        <tr>
+        <tr >
 
             {% for key, value in question.items() %}
-            <td>
+            <td >
                 {{value }}
 
             </td>

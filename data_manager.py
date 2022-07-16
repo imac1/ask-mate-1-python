@@ -11,7 +11,6 @@ import util
 raw_qs_dict = connection.get_raw_questions()
 
 
-
 def get_questions_header():
     items = connection.get_raw_questions()
     QUESTIONS_HEADER = list(items[0].keys())

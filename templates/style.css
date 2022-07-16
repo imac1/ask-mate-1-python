@@ -1,6 +1,7 @@
 .table {
     border-spacing: 0;
     margin: 1rem;
+    border: 1px solid black;
 }
 
 .table__row :nth-child(even) {
