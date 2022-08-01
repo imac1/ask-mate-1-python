@@ -1,4 +1,3 @@
-from multiprocessing.dummy import connection
 from flask import Flask, render_template, request, redirect, url_for
 import data_manager
 
@@ -6,12 +5,10 @@ import data_manager
 app = Flask(__name__)
 
 
-
-
 @app.route("/")
 def list():
     questions_header = data_manager.get_questions_header()
-    questions_list = data_manager.update_timestamp()
+    questions_list = data_manager.display_qs()
     return render_template(
         "list.html", questions_header=questions_header, questions_list=questions_list
     )
@@ -32,5 +29,4 @@ if __name__ == "__main__":
         host="0.0.0.0",
         port=8000,
         debug=True,
-    
     )

@@ -2,30 +2,34 @@
 {% block title %} List {% endblock %}
 
 {% block content %}
-<h2>List Content </h2>
-<table class="table">
-    <thead class="table__header">
-        <tr class="table__row">
-            {% for item in questions_header %}
-            <td class="table__cell">
-                {{ item }}
-            </td>
+<section>
+    <h2>List Content </h2>
+    <table class="table">
+        <caption>table caption</caption>
+        <details>Detail</details>
+        <thead class="table__header">
+            <tr>
+                {% for item in questions_header %}
+                <td class="table__cell">
+                    {{ item }}
+                </td>
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody class="table__row">
+            {% for question in questions_list %}
+            <tr>
+                {% for key, value in question.items() %}
+                <td class="table__cell">
+                    {{value }}
+                </td>
+                {% endfor %}
+            </tr>
             {% endfor %}
-        </tr>
-    </thead>
-    <tbody>
-        {% for question in questions_list %}
-        <tr class="table__row">
-
-            {% for key, value in question.items() %}
-            <td class="table__cell">
-                {{value }}
-
-            </td>
-            {% endfor %}
-
-        </tr>
-        {% endfor %}
-    </tbody>
-</table>
+        </tbody>
+    </table>
+</section>
+<section>
+    <p><flag-icon country="nl"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAAB5CAMAAACjkCtXAAAAFVBMVEWuHCj///8hRouqAADnx8jIzt4ANoR+6q6RAAAAeElEQVR4nO3OCQkAQQwAsd7rX/K6GCgkCjIDAAAAAAAA7PGsNO9Kc62kXdIuaZe0S9ol7ZJ2SbukXdIuaZe0S9ol7ZJ2SbukXdIuaZfmW2n+leZeSbukXdIuaZe0S9ol7ZJ2SbukXdIuaZe0S9ol7ZJ2SbukXdIuHUVUX/usC8EvAAAAAElFTkSuQmCC" alt="nl" width="20px" height="20px"></flag-icon></p>
+</section>
 {% endblock %}

@@ -1,18 +1,24 @@
+ /* 1. table */
+
 .table {
     border: 1px, solid, black;
     border-collapse: collapse;
-}
-
-.table__row :nth-child(even) {
-    background-color: bisque;
-
+    margin: 1rem;
 }
 
 .table__header {
-    background-color: azure;
+    background-color: rgb(239, 234, 234);
     text-align: left;
     border: 1px solid;
     border-collapse: collapse;
+}
+/* 
+.table__row :nth-child(even) {
+  background-color: rgb(180, 178, 178);
+
+} */
+tbody tr:nth-child(odd) {
+  background: rgb(186, 184, 184);
 }
 
 .table__cell {
@@ -20,7 +26,10 @@
     text-align: center;
     border: 1px solid;
     border-collapse: collapse;
+    padding: 3px;
 }
+
+/* 2. navigation bar */
 
 .topnav {
   background-color: #333;
@@ -47,4 +56,25 @@
 .topnav a.active {
   background-color: #9a9f9e;
   color: white;
+}
+
+/* 3. question answers */
+
+.w3-container:after, .w3-container:before, .w3-panel:after, .w3-panel:before, .w3-row:after, .w3-row:before, .w3-row-padding:after, .w3-row-padding:before, .w3-cell-row:before, .w3-cell-row:after, .w3-clear:after, .w3-clear:before, .w3-bar:before, .w3-bar:after {
+  content: "";
+  display: table;
+  clear: both
+}
+
+.w3-container, .w3-panel {
+  padding:0.01em 16px
+}
+
+.w3-panel {
+  margin-top: 16px;
+  margin-bottom: 16px
+}
+
+.w3-card-4, .w3-hover-shadow:hover {
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19)
 }

@@ -14,11 +14,10 @@ DATA_FILE_PATH_QS = os.path.join(proj_dir_path, "sample_data/question.csv")
 DATA_FILE_PATH_ANS = os.path.join(proj_dir_path, "sample_data/answer.csv")
 
 
-def get_raw_questions():
+def get_raw_data():
     questions = []
     with open(DATA_FILE_PATH_QS) as f:
         csv_reader = csv.DictReader(f)
         for row in csv_reader:
             questions.append(row)
     return questions
-

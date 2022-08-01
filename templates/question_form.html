@@ -1,9 +1,21 @@
-{% extends "base.html" %}
-{% block head %}
-{% endblock %}
-{% block title %} List {% endblock %}
-{% block content %}
+{% extends "base.html" %} {% block title %} Add a question {% endblock %} {%
+block content %}
 
-<h1>question form content </h1>
+<section class="w3-container">
+    <p></p>
+    <form>
+        <fieldset>
+            <legend>Add a Question</legend>
+            <p><label for="title">Title</label></p>
+            <p><input type="text" name="title" /></p>
+            <p><label for="message">Message</label></p>
+            <p>
+                <textarea name="message" id="" cols="60" rows="20"
+                    placeholder="Please enter your message here..."></textarea>
+            </p>
+        </fieldset>
+    </form>
+    <p></p>
+</section>
 
 {% endblock %}
